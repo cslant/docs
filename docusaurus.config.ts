@@ -58,6 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
+      hideOnScroll: true,
       title: 'CSlant',
       logo: {
         alt: 'CSlant Logo',
@@ -79,6 +80,14 @@ const config: Config = {
         },
       ],
     },
+
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+
     footer: {
       style: 'dark',
       /*links: [
@@ -135,6 +144,32 @@ const config: Config = {
         'scss',
       ],
     },
+    algolia: {
+      appId: 'OC7DGVG52Q',
+      apiKey: '2b3a0faf8ee2668b91552fa37281f124',
+
+      indexName: 'cslant_docs',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      // replaceSearchResultPathname: {
+      //   from: '/docs/', // or as RegExp: /\/docs\//
+      //   to: '/',
+      // },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
+    },
   } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -146,6 +181,8 @@ const config: Config = {
         routeBasePath: 'telegram-git-notifier',
         sidebarPath: require.resolve('./repo/telegram-git-notifier-docs/sidebar.ts'),
         editUrl: ({docPath}) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
   ],
