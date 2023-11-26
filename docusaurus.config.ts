@@ -87,6 +87,14 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
 
     footer: {
       style: 'dark',
