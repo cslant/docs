@@ -3,12 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'CSlant Docs',
+  title: 'CSlant Documentation',
   tagline: 'CSlant Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://cslant.com',
+  url: 'https://docs.cslant.com',
 
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
@@ -58,9 +58,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'CSlant',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'CSlant Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -73,14 +73,15 @@ const config: Config = {
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/cslant',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub organization',
         },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
+      /*links: [
         {
           title: 'Docs',
           items: [
@@ -116,14 +117,38 @@ const config: Config = {
             },
           ],
         },
-      ],
+      ],*/
       copyright: `Copyright © ${new Date().getFullYear()} CSlant`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: [
+        'java',
+        'latex',
+        'haskell',
+        'matlab',
+        'php',
+        'bash',
+        'diff',
+        'json',
+        'scss',
+      ],
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'telegram-git-notifier',
+        path: './repo/telegram-git-notifier-docs',
+        routeBasePath: 'telegram-git-notifier',
+        sidebarPath: require.resolve('./repo/telegram-git-notifier-docs/sidebar.ts'),
+        editUrl: ({docPath}) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
+      },
+    ],
+  ],
 };
 
 export default config;
