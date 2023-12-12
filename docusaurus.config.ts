@@ -114,6 +114,7 @@ const config: Config = {
       },
     ],
   ],
+  baseUrlIssueBanner: false
 };
 
 export default config;
