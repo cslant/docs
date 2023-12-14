@@ -113,6 +113,13 @@ const config: Config = {
         showLastUpdateTime: true,
       },
     ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-28YE6DJZ6X',
+        anonymizeIP: true,
+      },
+    ],
   ],
   baseUrlIssueBanner: false
 };
