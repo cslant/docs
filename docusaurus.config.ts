@@ -100,14 +100,15 @@ const config: Config = {
       ],
     },
     algolia: {
-      appId: 'OC7DGVG52Q',
-      apiKey: '2b3a0faf8ee2668b91552fa37281f124',
-      indexName: 'cslant_docs',
-
+      appId: 'QK70TDUAGZ',
+      apiKey: '28ededc173da23bc68359532a56852b3',
+      indexName: 'cslant',
+      insights: true,
       contextualSearch: true,
       externalUrlRegex: 'external\\.com|domain\\.com',
       searchParameters: {},
       searchPagePath: 'search',
+      placeholder: 'Search in CSlant Docs',
     },
   } satisfies Preset.ThemeConfig,
 
