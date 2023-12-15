@@ -46,6 +46,17 @@ const config: Config = {
       },
       items: [
         {
+          type: 'dropdown',
+          label: 'Repositories',
+          position: 'right',
+          items: [
+            {
+              label: 'Telegram Git Notifier',
+              href: '/telegram-git-notifier/introduction',
+            },
+          ],
+        },
+        {
           href: 'https://github.com/cslant',
           position: 'right',
           className: 'header-github-link',
