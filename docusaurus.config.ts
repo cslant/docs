@@ -101,7 +101,7 @@ const config: Config = {
     },
     algolia: {
       appId: 'QK70TDUAGZ',
-      apiKey: '28ededc173da23bc68359532a56852b3',
+      apiKey: 'bdd50828edf89cb3dafcac691af1e64f',
       indexName: 'cslant',
       insights: true,
       contextualSearch: true,
