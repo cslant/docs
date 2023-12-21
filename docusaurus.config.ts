@@ -123,7 +123,6 @@ const config: Config = {
         editUrl: ({docPath}) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
-        image: 'img/cslant-logo-horizontal.png',
       },
     ],
     [
