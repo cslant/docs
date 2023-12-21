@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'CSlant Documentation',
-  tagline: 'CSlant Documentation',
+  tagline: 'Documentation for CSlant projects',
   favicon: 'img/favicon.ico',
 
   url: 'https://docs.cslant.com',
@@ -36,13 +36,13 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/cslant-logo-horizontal.png',
     navbar: {
       hideOnScroll: true,
       title: 'CSlant',
       logo: {
         alt: 'CSlant Logo',
-        src: 'img/logo.svg',
+        src: 'img/cslant-logo.svg',
       },
       items: [
         {
@@ -123,6 +123,7 @@ const config: Config = {
         editUrl: ({docPath}) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
+        image: 'img/cslant-logo-horizontal.png',
       },
     ],
     [
