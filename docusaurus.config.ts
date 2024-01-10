@@ -103,12 +103,10 @@ const config: Config = {
       appId: 'QK70TDUAGZ',
       apiKey: 'bdd50828edf89cb3dafcac691af1e64f',
       indexName: 'cslant',
-      insights: true,
       contextualSearch: true,
       externalUrlRegex: 'external\\.com|domain\\.com',
       searchParameters: {},
       searchPagePath: 'search',
-      placeholder: 'Search in CSlant Docs',
     },
   } satisfies Preset.ThemeConfig,
 
