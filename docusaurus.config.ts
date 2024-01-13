@@ -52,7 +52,7 @@ const config: Config = {
           items: [
             {
               label: 'Telegram Git Notifier',
-              href: '/telegram-git-notifier/introduction',
+              href: '/telegram-git-notifier/',
             },
           ],
         },
@@ -108,6 +108,10 @@ const config: Config = {
       searchParameters: {},
       searchPagePath: 'search',
     },
+
+    theme: {
+      customCss: require.resolve('./repo/telegram-git-notifier-docs/homepage/styles.scss'),
+    }
   } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -130,6 +134,7 @@ const config: Config = {
         anonymizeIP: true,
       },
     ],
+    ['docusaurus-plugin-sass', {}]
   ],
   baseUrlIssueBanner: false
 };
