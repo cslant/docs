@@ -126,6 +126,15 @@ const config: Config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
+      {
+        id: 'laravel-like',
+        path: './repo/laravel-like-docs',
+        routeBasePath: 'laravel-like',
+        sidebarPath: require.resolve('./repo/laravel-like-docs/sidebar.ts'),
+        editUrl: ({docPath}) => `https://github.com/cslant/laravel-like-docs/edit/main/${docPath}`,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }
     ],
     [
       '@docusaurus/plugin-google-gtag',
