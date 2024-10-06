@@ -1,12 +1,12 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TelegramGitNotifierHome from "@site/repos/telegram-git-notifier-docs/homepage";
 import {Fragment} from "react";
+import LaravelLikePackageHome from "@site/repos/laravel-like-docs/homepage";
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
       <Fragment>
-          <TelegramGitNotifierHome />
+          <LaravelLikePackageHome />
       </Fragment>
   );
 }
