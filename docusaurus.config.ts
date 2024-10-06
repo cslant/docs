@@ -2,7 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { TelegramGitNotifierConfig, LaravelLikeConfig } from './src/configs/plugin-configs';
-import navbar from "@site/src/configs/navbar";
+import navbar from "./src/configs/navbar";
 
 const config: Config = {
   title: 'CSlant Documentation',
