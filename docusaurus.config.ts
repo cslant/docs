@@ -2,6 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { telegramGitNotifierConfig, laravelLikeConfig } from './src/configs/plugin-configs';
+import navbar from "@site/src/configs/navbar";
 
 const config: Config = {
   title: 'CSlant Documentation',
@@ -38,33 +39,7 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/cslant-logo-horizontal.png',
-    navbar: {
-      hideOnScroll: true,
-      title: 'CSlant',
-      logo: {
-        alt: 'CSlant Logo',
-        src: 'img/cslant-logo.svg',
-      },
-      items: [
-        {
-          type: 'dropdown',
-          label: 'Repositories',
-          position: 'right',
-          items: [
-            {
-              label: 'Telegram Git Notifier',
-              href: '/telegram-git-notifier/',
-            },
-          ],
-        },
-        {
-          href: 'https://github.com/cslant',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub organization',
-        },
-      ],
-    },
+    navbar: navbar,
 
     docs: {
       sidebar: {
