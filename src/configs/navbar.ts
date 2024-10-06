@@ -12,10 +12,10 @@ const navbar = {
       position: 'right',
       items: [
         {
-          label: 'Telegram Git Notifier',
+          label: 'Telegram Git Notifier Package',
           href: '/telegram-git-notifier/',
         }, {
-          label: 'Laravel Like',
+          label: 'Laravel Like Package',
           href: '/laravel-like/',
         },
       ],
