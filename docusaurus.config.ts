@@ -2,6 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import navbar from "./src/configs/navbar";
+import { LaravelLikeConfig, TelegramGitNotifierConfig } from "./plugin-configs";
 
 const config: Config = {
   title: 'CSlant Documentation',
@@ -92,27 +93,11 @@ const config: Config = {
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
-      {
-        id: 'telegram-git-notifier',
-        path: './repos/telegram-git-notifier-docs',
-        routeBasePath: 'telegram-git-notifier',
-        sidebarPath: require.resolve('./repos/telegram-git-notifier-docs/sidebar.ts'),
-        editUrl: ({ docPath }) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      },
+      TelegramGitNotifierConfig,
     ],
     [
       '@docusaurus/plugin-content-docs',
-      {
-        id: 'laravel-like',
-        path: './repos/laravel-like-docs',
-        routeBasePath: 'laravel-like',
-        sidebarPath: require.resolve('./repos/laravel-like-docs/sidebar.ts'),
-        editUrl: ({ docPath }) => `https://github.com/cslant/laravel-like-docs/edit/main/${docPath}`,
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      }
+      LaravelLikeConfig,
     ],
     [
       '@docusaurus/plugin-google-gtag',
