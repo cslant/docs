@@ -14,6 +14,9 @@ const navbar = {
         {
           label: 'Telegram Git Notifier',
           href: '/telegram-git-notifier/',
+        }, {
+          label: 'Laravel Like',
+          href: '/laravel-like/',
         },
       ],
     },

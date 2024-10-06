@@ -1,7 +1,6 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import { TelegramGitNotifierConfig, LaravelLikeConfig } from './src/configs/plugin-configs';
 import navbar from "./src/configs/navbar";
 
 const config: Config = {
@@ -86,15 +85,34 @@ const config: Config = {
     },
 
     theme: {
-      customCss: require.resolve('./repo/telegram-git-notifier-docs/homepage/styles.scss'),
+      customCss: require.resolve('./repos/telegram-git-notifier-docs/homepage/styles.scss'),
     }
   } satisfies Preset.ThemeConfig,
 
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
-      TelegramGitNotifierConfig,
-      LaravelLikeConfig,
+      {
+        id: 'telegram-git-notifier',
+        path: './repos/telegram-git-notifier-docs',
+        routeBasePath: 'telegram-git-notifier',
+        sidebarPath: require.resolve('./repos/telegram-git-notifier-docs/sidebar.ts'),
+        editUrl: ({ docPath }) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'laravel-like',
+        path: './repos/laravel-like-docs',
+        routeBasePath: 'laravel-like',
+        sidebarPath: require.resolve('./repos/laravel-like-docs/sidebar.ts'),
+        editUrl: ({ docPath }) => `https://github.com/cslant/laravel-like-docs/edit/main/${docPath}`,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      }
     ],
     [
       '@docusaurus/plugin-google-gtag',
