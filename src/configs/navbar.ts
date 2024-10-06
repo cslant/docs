@@ -1,6 +1,4 @@
-import type { Navbar } from '@docusaurus/types';
-
-const navbar: Navbar = {
+const navbar = {
   hideOnScroll: true,
   title: 'CSlant',
   logo: {

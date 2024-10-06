@@ -1,4 +1,4 @@
-export const telegramGitNotifierConfig = {
+export const TelegramGitNotifierConfig = {
   id: 'telegram-git-notifier',
   path: './repo/telegram-git-notifier-docs',
   routeBasePath: 'telegram-git-notifier',
@@ -8,7 +8,7 @@ export const telegramGitNotifierConfig = {
   showLastUpdateTime: true,
 };
 
-export const laravelLikeConfig = {
+export const LaravelLikeConfig = {
   id: 'laravel-like',
   path: './repo/laravel-like-docs',
   routeBasePath: 'laravel-like',

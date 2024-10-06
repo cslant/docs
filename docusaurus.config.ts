@@ -1,7 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import { telegramGitNotifierConfig, laravelLikeConfig } from './src/configs/plugin-configs';
+import { TelegramGitNotifierConfig, LaravelLikeConfig } from './src/configs/plugin-configs';
 import navbar from "@site/src/configs/navbar";
 
 const config: Config = {
@@ -39,7 +39,7 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/cslant-logo-horizontal.png',
-    navbar: navbar,
+    navbar: navbar as Preset.ThemeConfig['navbar'],
 
     docs: {
       sidebar: {
@@ -93,8 +93,8 @@ const config: Config = {
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
-      telegramGitNotifierConfig,
-      laravelLikeConfig,
+      TelegramGitNotifierConfig,
+      LaravelLikeConfig,
     ],
     [
       '@docusaurus/plugin-google-gtag',
