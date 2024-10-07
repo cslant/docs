@@ -2,18 +2,19 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import navbar from "./src/configs/navbar";
-import { LaravelLikeConfig, TelegramGitNotifierConfig } from "./plugin-configs";
+import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./plugin-configs";
+require('dotenv').config();
 
 const config: Config = {
-  title: 'CSlant Documentation',
+  title: process.env.BASE_NAME || 'CSlant Docs',
   tagline: 'Documentation for CSlant projects',
   favicon: 'img/favicon.ico',
 
-  url: 'https://docs.cslant.com',
+  url: process.env.DOCS_URL || 'https://docs.cslant.com',
 
   baseUrl: process.env.BASE_URL || '/',
-  organizationName: 'cslant',
-  projectName: 'cslant-docs',
+  organizationName: process.env.ORGANIZATION_NAME,
+  projectName: process.env.PROJECT_NAME,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -76,13 +77,13 @@ const config: Config = {
       ],
     },
     algolia: {
-      appId: 'QK70TDUAGZ',
-      apiKey: 'bdd50828edf89cb3dafcac691af1e64f',
-      indexName: 'cslant',
+      appId: process.env.ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_API_KEY,
+      indexName: process.env.ALGOLIA_INDEX_NAME,
       contextualSearch: true,
       externalUrlRegex: 'external\\.com|domain\\.com',
       searchParameters: {},
-      searchPagePath: 'search',
+      searchPagePath: process.env.ALGOLIA_SEARCH_PAGE_PATH,
     },
 
     theme: {
@@ -93,16 +94,16 @@ const config: Config = {
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
-      TelegramGitNotifierConfig,
+      TelegramGitNotifierPackageConfig,
     ],
     [
       '@docusaurus/plugin-content-docs',
-      LaravelLikeConfig,
+      LaravelLikePackageConfig,
     ],
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-28YE6DJZ6X',
+        trackingID: process.env.GOOGLE_ANALYTICS_ID,
         anonymizeIP: true,
       },
     ],
