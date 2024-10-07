@@ -11,9 +11,9 @@ const config: Config = {
 
   url: 'https://docs.cslant.com',
 
-  baseUrl: '/',
+  baseUrl: process.env.BASE_URL || '/',
   organizationName: 'cslant',
-  projectName: 'docusaurus-docs',
+  projectName: 'cslant-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
