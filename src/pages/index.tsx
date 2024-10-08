@@ -18,7 +18,7 @@ function HomepageHeader() {
               content="Documentation for CSlant projects. You can find the documentation for Laravel packages, PHP applications, and more. This documentation is easy to use and can be integrated into any project."
               data-rh="true" />
         <meta name="keywords"
-              content="laravel,php,package,documentation,laravel package,php application,laravel documentation,php documentation,cslant,cslant documentation"
+              content="laravel,php,package,documentation,laravel package,php application,laravel documentation,php documentation,cslant,cslant documentation,cslant laravel,cslant php"
               data-rh="true" />
       </Head>
 
