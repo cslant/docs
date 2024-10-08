@@ -2,7 +2,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import navbar from "./src/configs/navbar";
-import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./plugin-configs";
+import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./pluginConfigs";
+import { RepoDocsStatic } from "./src/configs/staticDirectories";
 require('dotenv').config();
 
 const config: Config = {
@@ -18,6 +19,11 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  
+  staticDirectories: [
+    ...RepoDocsStatic,
+    'static',
+  ] as Config['staticDirectories'],
 
   i18n: {
     defaultLocale: 'en',
@@ -29,7 +35,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: './src/configs/sidebars.ts',
         },
         theme: {
           customCss: './src/css/custom.css',
