@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+Allow: /*.css*
+Allow: /*.js*
+
+Sitemap: http://docs.cslant.com/sitemap.xml
