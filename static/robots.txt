@@ -18,4 +18,4 @@ Allow: /
 Allow: /*.css*
 Allow: /*.js*
 
-Sitemap: http://docs.cslant.com/sitemap.xml
+Sitemap: https://docs.cslant.com/sitemap.xml
