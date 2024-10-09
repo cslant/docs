@@ -54,6 +54,16 @@ const config: Config = {
         autoCollapseCategories: false,
       },
     },
+
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} CSlant`,
+    },
+
+    theme: {
+      customCss: require.resolve('./repos/telegram-git-notifier-docs/homepage/styles.scss'),
+    },
+    
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
@@ -61,11 +71,6 @@ const config: Config = {
     },
     liveCodeBlock: {
       playgroundPosition: 'bottom',
-    },
-
-    footer: {
-      style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} CSlant`,
     },
     prism: {
       theme: prismThemes.github,
@@ -91,10 +96,6 @@ const config: Config = {
       searchParameters: {},
       searchPagePath: process.env.ALGOLIA_SEARCH_PAGE_PATH,
     },
-
-    theme: {
-      customCss: require.resolve('./repos/telegram-git-notifier-docs/homepage/styles.scss'),
-    }
   } satisfies Preset.ThemeConfig,
 
   plugins: [
