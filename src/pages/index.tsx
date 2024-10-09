@@ -20,6 +20,16 @@ function HomepageHeader() {
         <meta name="keywords"
               content="laravel,php,package,documentation,laravel package,php application,laravel documentation,php documentation,cslant,cslant documentation,cslant laravel,cslant php"
               data-rh="true" />
+        <meta name="author" content="CSlant" data-rh="true" />
+        <meta name="robots" content="index, follow" data-rh="true" />
+        <meta property="og:site_name" content="CSlant Documentation" data-rh="true" />
+        <meta property="og:type" content="website" data-rh="true" />
+        <meta property="og:title" content="CSlant Documentation" data-rh="true" />
+        <meta property="og:description"
+              content="Documentation for CSlant projects. You can find the documentation for Laravel packages, PHP applications, and more. This documentation is easy to use and can be integrated into any project."
+              data-rh="true" />
+        <meta property="og:url" content="https://docs.cslant.com" data-rh="true" />
+        
       </Head>
 
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
