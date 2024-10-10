@@ -15,6 +15,12 @@ Allow: /
 User-agent: Googlebot-Mobile
 Allow: /
 
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
 Allow: /*.css*
 Allow: /*.js*
 

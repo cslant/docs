@@ -1,5 +1,7 @@
 ---
-title: Markdown page example
+title: CS Markdown Page Example
+description: A simple markdown page example. How to write a standalone markdown page without React.
+keywords: ['markdown', 'page', 'example', 'simple', 'standalone', 'without', 'React']
 ---
 
 <head>
@@ -7,6 +9,6 @@ title: Markdown page example
   <meta name="author" content="CSlant" />
 </head>
 
-# Markdown page example
+# CSlant Markdown Page Example
 
-You don't need React to write simple standalone pages.
+Nothing fancy here. Just a simple markdown page example.
