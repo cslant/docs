@@ -5,7 +5,7 @@ keywords: ['markdown', 'page', 'example', 'simple', 'standalone', 'without', 'Re
 ---
 
 <head>
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="noindex,nofollow" />
   <meta name="author" content="CSlant" />
 </head>
 
