@@ -1,7 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import navbar from "./src/configs/navbar";
+import Navbar from "./src/configs/navbar";
 import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./pluginConfigs";
 import { RepoDocsStatic } from "./src/configs/staticDirectories";
 require('dotenv').config();
@@ -50,7 +50,7 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/cslant-logo-horizontal.png',
-    navbar: navbar as Preset.ThemeConfig['navbar'],
+    navbar: Navbar as Preset.ThemeConfig['navbar'],
 
     docs: {
       sidebar: {
@@ -65,7 +65,7 @@ const config: Config = {
     },
 
     theme: {
-      customCss: require.resolve('./repos/telegram-git-notifier-docs/homepage/styles.scss'),
+      customCss: require.resolve('./repos/telegram-git-notifier-docs/assets/styles/styles.scss'),
     },
     
     colorMode: {

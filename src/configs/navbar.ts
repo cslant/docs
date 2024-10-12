@@ -1,4 +1,4 @@
-const navbar = {
+const Navbar = {
   hideOnScroll: true,
   title: 'CSlant',
   logo: {
@@ -29,4 +29,4 @@ const navbar = {
   ],
 };
 
-export default navbar;
+export default Navbar;
