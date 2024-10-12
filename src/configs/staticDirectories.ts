@@ -1,4 +1,4 @@
 export const RepoDocsStatic = [
-  'repos/telegram-git-notifier-docs/assets',
-  'repos/laravel-like-docs/assets',
+  'repos/telegram-git-notifier-docs/assets/public',
+  'repos/laravel-like-docs/assets/public',
 ];
