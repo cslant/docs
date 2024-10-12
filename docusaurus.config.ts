@@ -20,6 +20,10 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   
+  markdown: {
+    mermaid: true,
+  },
+  
   staticDirectories: [
     ...RepoDocsStatic,
     'static',
