@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import Navbar from "./src/configs/navbar";
 import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./pluginConfigs";
 import { RepoDocsStatic } from "./src/configs/staticDirectories";
+import PrismConfig from "./src/configs/prism";
 require('dotenv').config();
 
 const config: Config = {
@@ -76,21 +77,7 @@ const config: Config = {
     liveCodeBlock: {
       playgroundPosition: 'bottom',
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-      additionalLanguages: [
-        'java',
-        'latex',
-        'haskell',
-        'matlab',
-        'php',
-        'bash',
-        'diff',
-        'json',
-        'scss',
-      ],
-    },
+    prism: PrismConfig,
     algolia: {
       appId: process.env.ALGOLIA_APP_ID,
       apiKey: process.env.ALGOLIA_API_KEY,
