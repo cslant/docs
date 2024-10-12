@@ -5,6 +5,7 @@ import Navbar from "./src/configs/navbar";
 import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./pluginConfigs";
 import { RepoDocsStatic } from "./src/configs/staticDirectories";
 import PrismConfig from "./src/configs/prism";
+import AlgoliaConfig from "./src/configs/algolia";
 require('dotenv').config();
 
 const config: Config = {
@@ -75,15 +76,7 @@ const config: Config = {
       playgroundPosition: 'bottom',
     },
     prism: PrismConfig,
-    algolia: {
-      appId: process.env.ALGOLIA_APP_ID,
-      apiKey: process.env.ALGOLIA_API_KEY,
-      indexName: process.env.ALGOLIA_INDEX_NAME,
-      contextualSearch: true,
-      externalUrlRegex: 'external\\.com|domain\\.com',
-      searchParameters: {},
-      searchPagePath: process.env.ALGOLIA_SEARCH_PAGE_PATH,
-    },
+    algolia: AlgoliaConfig,
   } satisfies Preset.ThemeConfig,
 
   plugins: [
