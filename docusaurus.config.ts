@@ -25,10 +25,7 @@ const config: Config = {
     mermaid: true,
   },
   
-  staticDirectories: [
-    ...RepoDocsStatic,
-    'static',
-  ] as Config['staticDirectories'],
+  staticDirectories: [...RepoDocsStatic, 'static'] as Config['staticDirectories'],
 
   i18n: {
     defaultLocale: 'en',
