@@ -1,0 +1,11 @@
+[submodule "repos/telegram-git-notifier"]
+	path = repos/telegram-git-notifier
+	url = git@github.com:cslant/laravel-telegram-git-notifier.git
+
+[submodule "repos/telegram-git-notifier-docs"]
+	path = repos/telegram-git-notifier-docs
+	url = git@github.com:cslant/telegram-git-notifier-docs.git
+
+[submodule "repos/laravel-like-docs"]
+	path = repos/laravel-like-docs
+	url = git@github.com:cslant/laravel-like-docs.git
