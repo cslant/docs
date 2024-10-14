@@ -13,6 +13,8 @@ const config: Config = {
   tagline: 'Documentation for CSlant projects',
   favicon: 'img/favicon.ico',
 
+  trailingSlash: false,
+
   url: process.env.DOCS_URL || 'https://docs.cslant.com',
 
   baseUrl: process.env.BASE_URL || '/',
