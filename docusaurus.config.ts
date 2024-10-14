@@ -99,7 +99,9 @@ const config: Config = {
     ],
     ['docusaurus-plugin-sass', {}]
   ],
-  baseUrlIssueBanner: false
+  baseUrlIssueBanner: false,
+  
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;
