@@ -78,7 +78,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className={`container`}>
-        <div className={`${styles.main_docs__flex_container}`}>
+        <div className={styles.main_docs__grid_container}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
