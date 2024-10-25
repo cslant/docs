@@ -100,7 +100,7 @@ const config: Config = {
   ],
   baseUrlIssueBanner: false,
   
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', '@docusaurus/theme-live-codeblock'],
 };
 
 export default config;
