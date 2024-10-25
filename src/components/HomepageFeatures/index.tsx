@@ -10,18 +10,18 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Flexible Development Tools',
+    title: 'Easy to Use',
     description: (
       <>
-        CSlant offers customizable packages with clear docs for seamless integration and efficient use.
+        CSlant offers a variety of tools and resources to help developers seamlessly utilize its convenient tools and features within their projects.
       </>
     ),
   },
   {
-    title: 'Open Source Focus',
+    title: 'Open Source Projects',
     description: (
       <>
-        Dedicated to open-source projects, providing tools and libraries that enhance workflows.
+        CSlant is committed to open-source projects, offering a variety of tools and resources for developers.
       </>
     ),
   },

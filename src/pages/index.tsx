@@ -42,7 +42,7 @@ function HomepageHeader() {
               <Heading as="h1" className={`hero__title text--left ${styles.main_docs__title_banner}`}>
                 Documentation
               </Heading>
-              <p className={`hero__subtitle text--left ${styles.main_docs__content_banner}`}>Documentation offers detailed guidelines and resources to help developers seamlessly utilize CSlant's convenient tools and features within your projects.</p>
+              <p className={`hero__subtitle text--left ${styles.main_docs__content_banner}`}>The documentation provides comprehensive guidelines and resources to help developers seamlessly integrate CSlant’s tools and features into their projects.</p>
               <div className={styles.main_docs__get_started_container}>
                 <a href={'https://cslant.com'} className={styles.main_docs__get_started}>Get Started</a>
               </div>
