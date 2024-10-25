@@ -3,6 +3,12 @@
  * and scoped locally.
  */
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -20,4 +26,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.main_docs__image_container {
+  max-width: 320px;
+  max-height: 320px;
+}
+.main_docs__image_container svg{
+  width: 100%;
+  height: 100%;
+}
+.main_docs__left_header {
+  text-align: center;
+  margin: auto 0 auto auto;
+}
+.main_docs__banner{
+  justify-content: center;
+}
+@media only screen and (max-width: 767.99px) {
+  .heroBanner {
+    padding: 2rem 0 !important;
+  }
+  .main_docs__image_container{
+    margin: auto;
+  }
+  .main_docs__banner {
+    flex-direction: column-reverse;
+  }
 }

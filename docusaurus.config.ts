@@ -1,4 +1,3 @@
-import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import Navbar from "./src/configs/navbar";
@@ -10,7 +9,7 @@ require('dotenv').config();
 
 const config: Config = {
   title: process.env.BASE_NAME || 'CSlant Docs',
-  tagline: 'Documentation for CSlant projects',
+  tagline: 'CSlant Documentation provides comprehensive guidelines and resources for developers to easily integrate and use the CSLant API in their projects.',
   favicon: 'img/favicon.ico',
 
   trailingSlash: false, // This is to remove trailing slash from the URL
