@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const config: Config = {
   title: process.env.BASE_NAME || 'CSlant Docs',
-  tagline: 'CSlant Documentation provides comprehensive guidelines and resources for developers to easily integrate and use the CSLant API in their projects.',
+  tagline: 'CSlant Documentation offers detailed guidelines and resources to help developers seamlessly utilize CSlant\'s convenient tools and features within your projects.',
   favicon: 'img/favicon.ico',
 
   trailingSlash: false, // This is to remove trailing slash from the URL

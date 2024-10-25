@@ -1,9 +1,8 @@
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import MainDocsIcon from '@site/static/img/main-docs.svg';
+import CSlantLogoBanner from '@site/static/img/cslant-logo-banner.svg';
 import styles from './home/index.module.css';
 import Head from '@docusaurus/core/lib/client/exports/Head';
 
@@ -41,14 +40,17 @@ function HomepageHeader() {
         <div className="container">
           <div className={`row ${styles.main_docs__banner}`}>
             <div className="col col--5 main_docs__left_header">
-              <Heading as="h1" className="hero__title text--left">
+              <Heading as="h1" className={`hero__title text--left ${styles.main_docs__title_banner}`}>
                 {siteConfig.title}
               </Heading>
               <p className="hero__subtitle text--left">{siteConfig.tagline}</p>
+              <div className={styles.main_docs__get_started_container}>
+                <a href={'https://cslant.com/'} className={styles.main_docs__get_started}>Get Started</a>
+              </div>
             </div>
             <div className="col col--3">
               <div className={styles.main_docs__image_container}>
-                <MainDocsIcon />
+                <CSlantLogoBanner />
                 {/*<img src="img/main-docs.svg" alt="CSlant Laravel Like Package" />*/}
               </div>
             </div>
