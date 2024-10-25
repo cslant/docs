@@ -29,8 +29,8 @@
 }
 
 .main_docs__image_container {
-  max-width: 320px;
-  max-height: 320px;
+  min-width: 280px;
+  aspect-ratio: 1;
 }
 
 .main_docs__image_container svg {
@@ -44,7 +44,11 @@
 }
 
 .main_docs__banner {
+  display: flex;
   justify-content: center;
+  margin: auto;
+  max-width: 800px;
+  gap: 16px;
 }
 
 .main_docs__get_started_container {
@@ -56,7 +60,7 @@
   border-radius: 20px;
   padding: 0 20px;
   line-height: 38px;
-  font-size: 14px;
+  font-size: 1rem;
   text-decoration: unset !important;
   background: var(--ifm-color-primary);
   transition: color .25s, border-color .25s, background-color .25s;
@@ -69,19 +73,49 @@
 }
 
 .main_docs__title_banner {
-  color: var(--ifm-color-primary)
+  color: var(--ifm-color-primary);
 }
 
-@media only screen and (max-width: 767.99px) {
+@media only screen and (max-width: 1440px) {
+  .main_docs__title_banner {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .main_docs__content_banner {
+    text-align: center;
+  }
+
+  .main_docs__get_started_container {
+    text-align: center;
+  }
+
+  .main_docs__title_banner {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main_docs__banner {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
   .heroBanner {
     padding: 2rem 0 !important;
   }
 
   .main_docs__image_container {
     margin: auto;
+    width: 200px;
+    min-width: 200px;
+    aspect-ratio: 1;
   }
 
-  .main_docs__banner {
-    flex-direction: column-reverse;
+  .main_docs__get_started {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
   }
 }

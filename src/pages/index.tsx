@@ -38,21 +38,19 @@ function HomepageHeader() {
 
       <header className={styles.heroBanner}>
         <div className="container">
-          <div className={`row ${styles.main_docs__banner}`}>
-            <div className="col col--5 main_docs__left_header">
+          <div className={styles.main_docs__banner}>
+            <div className={styles.main_docs__left_header}>
               <Heading as="h1" className={`hero__title text--left ${styles.main_docs__title_banner}`}>
                 {siteConfig.title}
               </Heading>
-              <p className="hero__subtitle text--left">{siteConfig.tagline}</p>
+              <p className={`hero__subtitle text--left ${styles.main_docs__content_banner}`}>{siteConfig.tagline}</p>
               <div className={styles.main_docs__get_started_container}>
                 <a href={'https://cslant.com/'} className={styles.main_docs__get_started}>Get Started</a>
               </div>
             </div>
-            <div className="col col--3">
-              <div className={styles.main_docs__image_container}>
-                <CSlantLogoBanner />
-                {/*<img src="img/main-docs.svg" alt="CSlant Laravel Like Package" />*/}
-              </div>
+            <div className={styles.main_docs__image_container}>
+              <CSlantLogoBanner />
+              {/*<img src="img/main-docs.svg" alt="CSlant Laravel Like Package" />*/}
             </div>
           </div>
         </div>

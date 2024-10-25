@@ -10,50 +10,50 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy Integration',
+    title: 'Flexible Development Tools',
     description: (
       <>
-        CSlant was built for simplicity, enabling you to integrate our API with ease, minimizing the setup time for your projects
+        CSlant offers customizable packages with clear docs for seamless integration and efficient use.
       </>
     ),
   },
   {
-    title: 'Comprehensive Guides',
+    title: 'Open Source Focus',
     description: (
       <>
-        Access step-by-step guides to help you navigate every feature of the CSlant API with ease.
+        Dedicated to open-source projects, providing tools and libraries that enhance workflows.
       </>
     ),
   },
   {
-    title: 'Customizable API',
+    title: 'Technology Expertise',
     description: (
       <>
-        Tailor the CSlant API to fit your project needs. Our documentation makes it easy to extend, modify, and scale your implementation.
+         Specializes in modern web development frameworks, promoting best practices.
       </>
     ),
   },
   {
-    title: 'Powered by Laravel',
+    title: 'Innovative Solutions',
     description: (
       <>
-        CSlant is built on Laravel, offering robust, scalable, and secure solutions, ensuring a seamless experience for developers.
+        Offers integrations to streamline software automation and improve notification systems.
       </>
     ),
   },
   {
-    title: 'Developer-Centric',
+    title: 'Flexible Development Tools',
     description: (
       <>
-        Focused on developers, CSlant provides resources, FAQs, and examples, making your API journey smooth and productive.
+        CSlant offers customizable packages with clear docs for seamless integration and efficient use.
       </>
     ),
   },
   {
-    title: 'Reliable Support',
+    title: 'Documentation and Support',
     description: (
       <>
-        With CSlant, you're never alone. Our active support team and community are always ready to assist you with any issues or questions
+        Actively maintaining clear and user-friendly documentation for all projects.
       </>
     ),
   },
