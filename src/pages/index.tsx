@@ -37,7 +37,7 @@ function HomepageHeader() {
 
       </Head>
 
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <header className={styles.heroBanner}>
         <div className="container">
           <div className={`row ${styles.main_docs__banner}`}>
             <div className="col col--5 main_docs__left_header">
