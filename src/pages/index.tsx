@@ -7,7 +7,6 @@ import styles from './home/index.module.css';
 import Head from '@docusaurus/core/lib/client/exports/Head';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <>
       <Head>
@@ -41,11 +40,11 @@ function HomepageHeader() {
           <div className={styles.main_docs__banner}>
             <div className={styles.main_docs__left_header}>
               <Heading as="h1" className={`hero__title text--left ${styles.main_docs__title_banner}`}>
-                {siteConfig.title}
+                Documentation
               </Heading>
-              <p className={`hero__subtitle text--left ${styles.main_docs__content_banner}`}>{siteConfig.tagline}</p>
+              <p className={`hero__subtitle text--left ${styles.main_docs__content_banner}`}>Documentation offers detailed guidelines and resources to help developers seamlessly utilize CSlant's convenient tools and features within your projects.</p>
               <div className={styles.main_docs__get_started_container}>
-                <a href={'https://cslant.com/'} className={styles.main_docs__get_started}>Get Started</a>
+                <a href={'https://cslant.com'} className={styles.main_docs__get_started}>Get Started</a>
               </div>
             </div>
             <div className={styles.main_docs__image_container}>
