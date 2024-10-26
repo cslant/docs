@@ -48,8 +48,7 @@ function HomepageHeader() {
               </div>
             </div>
             <div className={styles.main_docs__image_container}>
-              <CSlantLogoBanner />
-              {/*<img src="img/main-docs.svg" alt="CSlant Laravel Like Package" />*/}
+              <CSlantLogoBanner title="CSlant Logo" />
             </div>
           </div>
         </div>
