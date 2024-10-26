@@ -11,6 +11,7 @@
 
 This repository contains the documentation for CSlant. The documentation is available at [https://docs.cslant.com](https://docs.cslant.com).
 
+[![Deploy CSlant Server](https://github.com/cslant/docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/cslant/docs/actions/workflows/deploy.yml)
 
 ### Installation
 
