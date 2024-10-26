@@ -2,7 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import CSlantLogoBanner from '@site/static/img/cslant-logo-banner.svg';
+import CSlantLogoBanner from '@site/static/img/cslant-logo.svg';
 import styles from './home/index.module.css';
 import Head from '@docusaurus/core/lib/client/exports/Head';
 
