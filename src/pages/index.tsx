@@ -48,7 +48,7 @@ function HomepageHeader() {
                 tools and features into their projects.
               </p>
               <div className={styles.main_docs__get_started_container}>
-                <a href={'https://cslant.com'} className={styles.main_docs__get_started}>Get Started</a>
+                <a href={'/laravel-like'} className={styles.main_docs__get_started}>Get Started</a>
               </div>
             </div>
             <div className={styles.main_docs__image_container}>
