@@ -19,6 +19,6 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
           script: |
             source "$HOME/.nvm/nvm.sh"
-            nvm use ${{ env.GLOBAL_NVM_USE_VERSION }}
+            nvm use ${{ vars.GLOBAL_NVM_USE_VERSION }}
             cd ${{ secrets.DOCS_RUNNER_PATH }}
             ${{ secrets.DOCS_RUNNER_COMMAND }}
