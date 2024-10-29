@@ -7,6 +7,13 @@ const Navbar = {
   },
   items: [
     {
+      type: 'doc',
+      docId: 'index',
+      href: 'https://cslant.com',
+      label: 'Home',
+      position: 'right',
+    },
+    {
       type: 'dropdown',
       label: 'Repositories',
       position: 'right',
