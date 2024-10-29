@@ -9,7 +9,14 @@ const Navbar = {
     {
       type: 'doc',
       docId: 'index',
+      label: 'Our Website',
       href: 'https://cslant.com',
+      position: 'left',
+    },
+    {
+      type: 'doc',
+      docId: 'index',
+      href: '/',
       label: 'Home',
       position: 'right',
     },
