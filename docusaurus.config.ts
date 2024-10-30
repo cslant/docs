@@ -61,7 +61,7 @@ const config: Config = {
 
     footer: {
       style: 'dark',
-      copyright: `Copyright &#169; ${new Date().getFullYear()} <a href="https://cslant.com">CSlant</a>`,
+      copyright: `Copyright &#169; ${new Date().getFullYear()} <a href="https://cslant.com" target="_blank" rel="noopener noreferrer">CSlant</a>`,
     },
 
     theme: {
