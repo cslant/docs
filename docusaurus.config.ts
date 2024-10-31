@@ -79,13 +79,6 @@ const config: Config = {
     prism: PrismConfig,
     algolia: AlgoliaConfig,
     
-    scripts: [
-      {
-        src: 'https://static.cloudflareinsights.com/beacon.min.js',
-        async: true,
-        'data-cf-beacon': `{"token": "${process.env.CLOUDFLARE_ANALYTICS_TOKEN}"}`,
-      },
-    ],
   } satisfies Preset.ThemeConfig,
 
   plugins: [
@@ -108,6 +101,14 @@ const config: Config = {
   ],
   baseUrlIssueBanner: false,
   
+  scripts: [
+    {
+      src: 'https://static.cloudflareinsights.com/beacon.min.js',
+      async: true,
+      'data-cf-beacon': `{"token": "${process.env.CLOUDFLARE_ANALYTICS_TOKEN}"}`,
+    },
+  ],
+
   themes: ['@docusaurus/theme-mermaid', '@docusaurus/theme-live-codeblock'],
 };
 
