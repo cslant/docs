@@ -50,3 +50,8 @@
 .m-0 {
   margin: 0 !important;
 }
+
+img[src] {
+  max-width: 100%;
+  border-radius: 16px;
+}
