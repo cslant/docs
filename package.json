@@ -29,8 +29,8 @@
     "docusaurus-plugin-sass": "^0.2.6",
     "dotenv": "^16.4.5",
     "prism-react-renderer": "^2.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-loadable": "^5.5.0",
     "sass": "^1.79.4",
     "search-insights": "^2.17.2",
@@ -57,5 +57,5 @@
   "engines": {
     "node": ">=20.0"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@4.0.0"
 }
