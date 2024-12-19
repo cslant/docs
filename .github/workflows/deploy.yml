@@ -23,6 +23,10 @@ jobs:
             cd ${{ secrets.DOCS_RUNNER_PATH }}
             ${{ secrets.DOCS_RUNNER_COMMAND }}
 
+  sync-build:
+    runs-on: self-hosted
+    needs: deploy
+    steps:
       - name: Sync build
         uses: appleboy/ssh-action@master
         with:
