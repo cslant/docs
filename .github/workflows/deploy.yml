@@ -12,11 +12,11 @@ jobs:
       - name: Deploy to Remote Host
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USERNAME }}
-          password: ${{ secrets.REMOTE_PASS }}
+          host: ${{ secrets.REMOTE_HOST_WEB_2 }}
+          username: ${{ secrets.REMOTE_USERNAME_WEB_2 }}
+          password: ${{ secrets.REMOTE_PASS_WEB_2 }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.REMOTE_PORT }}
+          port: ${{ secrets.REMOTE_PORT_WEB_2 }}
           script: |
             source "$HOME/.nvm/nvm.sh"
             nvm use ${{ vars.GLOBAL_NVM_USE_VERSION }}
