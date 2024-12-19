@@ -36,4 +36,4 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY_WEB_2 }}
           port: ${{ secrets.REMOTE_PORT_WEB_2 }}
           script: |
-            rsync -avz --delete -e "ssh ${{ secrets.NGINX_SERVER_NAME }}" ${{ vars.DOCS_PATH_WEB_2 }}/build/ ${{ vars.NGINX_SERVER_NAME }}:${{ vars.NGINX_SERVER_DOCS_PATH }}
+            rsync -avz --delete ${{ vars.DOCS_PATH_WEB_2 }}/build/ ${{ vars.NGINX_SERVER_NAME }}:${{ vars.NGINX_SERVER_SYNC_PATH }}/docs/
