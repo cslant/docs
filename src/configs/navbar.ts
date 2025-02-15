@@ -34,6 +34,11 @@ const Navbar = {
           href: '/laravel-like/',
           id: 'laravel-like',
         },
+        {
+          label: 'Github Project PHP',
+          href: '/github-project-php/',
+          id: 'github-project-php',
+        }
       ],
     },
     {
