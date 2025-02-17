@@ -27,16 +27,16 @@ const Navbar = {
       items: [
         {
           label: 'Telegram Git Notifier Package',
-          href: '/telegram-git-notifier/',
+          href: '/telegram-git-notifier',
           id: 'telegram-git-notifier',
         }, {
           label: 'Laravel Like Package',
-          href: '/laravel-like/',
+          href: '/laravel-like',
           id: 'laravel-like',
         },
         {
           label: 'Github Project PHP',
-          href: '/github-project-php/',
+          href: '/github-project-php',
           id: 'github-project-php',
         }
       ],
