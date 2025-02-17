@@ -17,7 +17,8 @@ export const LaravelLikePackageConfig = {
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
 };
-export const GithubProjectConfig = {
+
+export const GithubProjectPHPConfig = {
   id: 'github-project-php',
   path: './repos/github-project-php-docs',
   routeBasePath: 'github-project-php',
