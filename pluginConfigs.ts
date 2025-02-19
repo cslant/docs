@@ -17,3 +17,13 @@ export const LaravelLikePackageConfig = {
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
 };
+
+export const GithubProjectPHPConfig = {
+  id: 'github-project-php',
+  path: './repos/github-project-php-docs',
+  routeBasePath: 'github-project-php',
+  sidebarPath: require.resolve('./repos/github-project-php-docs/sidebar.ts'),
+  editUrl: ({ docPath }) => `https://github.com/cslant/github-project-php-docs/edit/main/${docPath}`,
+  showLastUpdateAuthor: true,
+  showLastUpdateTime: true,
+};

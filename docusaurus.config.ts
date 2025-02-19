@@ -1,7 +1,7 @@
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import Navbar from "./src/configs/navbar";
-import { LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from "./pluginConfigs";
+import { GithubProjectPHPConfig, LaravelLikePackageConfig, TelegramGitNotifierPackageConfig } from './pluginConfigs';
 import { RepoDocsStatic } from "./src/configs/staticDirectories";
 import PrismConfig from "./src/configs/prism";
 import AlgoliaConfig from "./src/configs/algolia";
@@ -89,6 +89,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       LaravelLikePackageConfig,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      GithubProjectPHPConfig,
     ],
     [
       '@docusaurus/plugin-google-gtag',

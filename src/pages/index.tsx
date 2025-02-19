@@ -5,6 +5,7 @@ import Heading from '@theme/Heading';
 import CSlantLogoBanner from '@site/static/img/cslant-logo.svg';
 import styles from './home/index.module.css';
 import Head from '@docusaurus/core/lib/client/exports/Head';
+import { JSX } from 'react';
 
 function HomepageHeader() {
   return (

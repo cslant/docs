@@ -1,5 +1,5 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {Fragment} from "react";
+import {Fragment, JSX} from "react";
 import LaravelLikePackageHome from "@site/repos/laravel-like-docs/homepage";
 
 export default function Home(): JSX.Element {
