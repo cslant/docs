@@ -13,6 +13,10 @@ This repository contains the documentation for CSlant. The documentation is avai
 
 [![Deploy CSlant Server](https://github.com/cslant/docs/actions/workflows/deploy.yml/badge.svg)](https://github.com/cslant/docs/actions/workflows/deploy.yml)
 
+### Add submodule
+
+Check and add CSlant repos with the suffix `docs` type.
+
 ### Installation
 
 ```bash
