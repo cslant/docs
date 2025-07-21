@@ -1,7 +1,6 @@
 ---
 title: CS Markdown Page Example
 description: A simple markdown page example. How to write a standalone markdown page without React.
-keywords: ['markdown', 'page', 'example', 'simple', 'standalone', 'without', 'React']
 ---
 
 <head>
