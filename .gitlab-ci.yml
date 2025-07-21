@@ -1,0 +1,17 @@
+stages:
+  - build
+
+variables:
+  GIT_STRATEGY: none
+
+build:
+  stage: build
+  tags:
+    - csl-88176
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - source "$HOME/.nvm/nvm.sh"
+    - nvm use 22
+    - cd $DOCS_RUNNER_PATH
+    - $DOCS_RUNNER_COMMAND
