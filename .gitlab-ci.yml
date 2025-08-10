@@ -14,4 +14,5 @@ build:
     - source "$HOME/.nvm/nvm.sh"
     - nvm use 22
     - cd $DOCS_RUNNER_PATH
-    - $DOCS_RUNNER_COMMAND
+    - ./runner.sh a
+    - ./runner.sh update_assets
