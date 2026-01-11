@@ -7,7 +7,7 @@ variables:
 build:
   stage: build
   tags:
-    - csl-88176
+    - csl2
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:
