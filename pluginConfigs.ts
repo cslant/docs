@@ -6,6 +6,7 @@ export const TelegramGitNotifierPackageConfig = {
   editUrl: ({ docPath }) => `https://github.com/cslant/telegram-git-notifier-docs/edit/main/${docPath}`,
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
+  exclude: ['**/README.md'],
 };
 
 export const LaravelLikePackageConfig = {
@@ -16,6 +17,7 @@ export const LaravelLikePackageConfig = {
   editUrl: ({ docPath }) => `https://github.com/cslant/laravel-like-docs/edit/main/${docPath}`,
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
+  exclude: ['**/README.md'],
 };
 
 export const GithubProjectPHPConfig = {
@@ -26,4 +28,5 @@ export const GithubProjectPHPConfig = {
   editUrl: ({ docPath }) => `https://github.com/cslant/github-project-php-docs/edit/main/${docPath}`,
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
+  exclude: ['**/README.md'],
 };
