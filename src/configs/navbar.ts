@@ -29,7 +29,20 @@ const Navbar = {
     },
     {
       type: 'dropdown',
-      label: 'Repositories',
+      label: 'Products',
+      position: 'right',
+      items: [
+        {
+          label: 'Golemi Proxy',
+          href: 'https://golemi.io/docs',
+          id: 'golemi-proxy',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      type: 'dropdown',
+      label: 'Packages',
       position: 'right',
       items: [
         {
