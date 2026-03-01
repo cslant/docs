@@ -174,6 +174,63 @@
   animation: gradientShift 4s ease infinite;
 }
 
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes particleFloat {
+  0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.6; }
+  25% { transform: translateY(-20px) translateX(10px) rotate(90deg); opacity: 1; }
+  50% { transform: translateY(-35px) translateX(-5px) rotate(180deg); opacity: 0.8; }
+  75% { transform: translateY(-15px) translateX(-15px) rotate(270deg); opacity: 1; }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.5; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+
+@keyframes slideInFromBottom {
+  from { opacity: 0; transform: translateY(60px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ====== Additional Utility Classes ====== */
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out both;
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(46, 133, 85, 0.3), 0 8px 32px rgba(46, 133, 85, 0.15);
+}
+
 /* Scroll-triggered animation utility */
 .scroll-animate {
   opacity: 0;
@@ -185,6 +242,82 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ====== Animated Section Divider ====== */
+.section-divider {
+  height: 3px;
+  border: none;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  margin: 2.5rem auto;
+  max-width: 600px;
+  border-radius: 2px;
+}
+
+/* ====== Tag Badges ====== */
+.tag-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(46, 133, 85, 0.2);
+  background: rgba(46, 133, 85, 0.08);
+  color: var(--ifm-color-primary);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-badge:hover {
+  background: rgba(46, 133, 85, 0.15);
+  border-color: rgba(46, 133, 85, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 133, 85, 0.15);
+}
+
+[data-theme='dark'] .tag-badge {
+  background: rgba(37, 194, 160, 0.1);
+  border-color: rgba(37, 194, 160, 0.2);
+  color: var(--ifm-color-primary-light);
+}
+
+/* ====== Section Title Fancy ====== */
+.section-title-fancy {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-fancy::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--gradient-primary);
+  margin: 12px auto 0;
+}
+
+.section-subtitle-fancy {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* ====== Mouse Glow Background ====== */
+.mouse-glow-bg {
+  position: relative;
+  overflow: hidden;
+}
+
 
 .header-github-link:hover {
   opacity: 0.6;

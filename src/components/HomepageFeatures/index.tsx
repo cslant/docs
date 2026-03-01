@@ -110,6 +110,14 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className={`container`}>
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+          <h2 className="section-title-fancy gradient-text" style={{ fontSize: '2rem' }}>
+            Why CSlant?
+          </h2>
+          <p className="section-subtitle-fancy">
+            Powerful tools and resources designed to make your development experience seamless and enjoyable.
+          </p>
+        </div>
         <div className={styles.main_docs__grid_container}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} index={idx} {...props} />

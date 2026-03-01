@@ -5,9 +5,46 @@ import Heading from '@theme/Heading';
 import CSlantLogoBanner from '@site/static/img/cslant-logo.svg';
 import styles from './home/index.module.css';
 import Head from '@docusaurus/core/lib/client/exports/Head';
-import { JSX } from 'react';
+import React, { JSX, useEffect, useState } from 'react';
+import { useMouseGlow } from '@site/src/components/useMouseGlow';
+import MouseGlowOverlay from '@site/src/components/MouseGlowOverlay';
+
+const typingTexts = ['Laravel Packages', 'PHP Applications', 'Open Source Tools', 'Developer Resources'];
+
+function useTypingEffect(texts: string[], speed = 80, pause = 2000) {
+  const [display, setDisplay] = useState('');
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = texts[textIndex];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplay(current.slice(0, charIndex + 1));
+        setCharIndex(c => c + 1);
+        if (charIndex + 1 === current.length) {
+          setTimeout(() => setIsDeleting(true), pause);
+        }
+      } else {
+        setDisplay(current.slice(0, charIndex - 1));
+        setCharIndex(c => c - 1);
+        if (charIndex <= 1) {
+          setIsDeleting(false);
+          setTextIndex((textIndex + 1) % texts.length);
+        }
+      }
+    }, isDeleting ? speed / 2 : speed);
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, textIndex, texts, speed, pause]);
+
+  return display;
+}
 
 function HomepageHeader() {
+  const typedText = useTypingEffect(typingTexts);
+  const { glow, onMouseMove, onMouseLeave } = useMouseGlow();
+
   return (
     <>
       <Head>
@@ -33,13 +70,18 @@ function HomepageHeader() {
           data-rh="true"
         />
         <meta property="og:url" content="https://docs.cslant.com" data-rh="true" />
-
       </Head>
 
-      <header className={styles.heroBanner}>
+      <header
+        className={styles.heroBanner}
+        onMouseMove={onMouseMove}
+        onMouseLeave={onMouseLeave}
+      >
+        <MouseGlowOverlay glow={glow} color="rgba(46, 133, 85, 0.15)" />
         <div className="container">
           <div className={styles.main_docs__banner}>
             <div className={styles.main_docs__left_header}>
+              <div className={styles.main_docs__badge}>📖 Open Source Documentation</div>
               <Heading as="h1" className={`hero__title text--left ${styles.main_docs__title_banner}`}>
                 Documentation
               </Heading>
@@ -48,8 +90,14 @@ function HomepageHeader() {
                 <span style={{ fontWeight: 'bold' }} className={styles.main_docs__title_banner}> CSlant's </span>
                 tools and features into their projects.
               </p>
+              <p className={`text--left ${styles.main_docs__typed_text}`}>
+                Explore: <span className={styles.main_docs__typed_value}>{typedText}</span>
+                <span className={styles.main_docs__cursor}>|</span>
+              </p>
               <div className={styles.main_docs__get_started_container}>
-                <a href={'/laravel-like'} className={styles.main_docs__get_started}>Get Started</a>
+                <a href={'/laravel-like'} className={styles.main_docs__get_started}>
+                  🚀 Get Started
+                </a>
               </div>
             </div>
             <div className={styles.main_docs__image_container}>
