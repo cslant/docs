@@ -43,6 +43,94 @@
   --shadow-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-elevation-2: 0 8px 30px rgba(0, 0, 0, 0.4);
   --shadow-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+  /* Darker background colors for better readability */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-card-background-color: #161b22;
+  --ifm-code-background: #1c2128;
+  --ifm-pre-background: #1c2128;
+  --ifm-toc-background-color: #0d1117;
+  --ifm-menu-color-background-active: #161b22;
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-footer-background-color: #0d1117;
+  --ifm-hover-overlay: rgba(255, 255, 255, 0.05);
+}
+
+/* Dark mode specific overrides */
+[data-theme='dark'] body {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .main-wrapper {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .doc-main-container {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .theme-doc-markdown {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .menu {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  background-color: #0d1117;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: #0d1117;
+  border-bottom: 1px solid #21262d;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #0d1117;
+  border-top: 1px solid #21262d;
+}
+
+[data-theme='dark'] .table-of-contents {
+  background-color: transparent;
+}
+
+[data-theme='dark'] .theme-code-block {
+  background-color: #1c2128;
+}
+
+[data-theme='dark'] .card {
+  background-color: #161b22;
+  border: 1px solid #21262d;
+}
+
+[data-theme='dark'] .theme-admonition {
+  background-color: #161b22;
+}
+
+[data-theme='dark'] details {
+  background-color: #161b22;
+  border: 1px solid #21262d;
+}
+
+[data-theme='dark'] .pagination-nav__link {
+  background-color: #161b22;
+  border: 1px solid #21262d;
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  background-color: #1c2128;
+}
+
+/* Breadcrumbs */
+[data-theme='dark'] .breadcrumbs {
+  background-color: transparent;
+}
+
+/* Search box */
+[data-theme='dark'] .DocSearch {
+  --docsearch-container-background: rgba(13, 17, 23, 0.9);
 }
 
 /* ====== Global Keyframe Animations ====== */
