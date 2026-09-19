@@ -25,6 +25,24 @@
   --shadow-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-elevation-2: 0 8px 30px rgba(0, 0, 0, 0.12);
   --shadow-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.18);
+
+  /* ====== Neumorphic Design Tokens ====== */
+  --nm-bg: #e9edf3;
+  --nm-surface: #e9edf3;
+  --nm-text: #2e3440;
+  --nm-muted: #5d6b7e;
+  --nm-shadow-dark: #b6c0ce;
+  --nm-shadow-light: #ffffff;
+  --nm-radius: 1.1rem;
+  --nm-radius-sm: 0.8rem;
+  --nm-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.62), rgba(0, 0, 0, 0.045));
+  --nm-gradient-soft: linear-gradient(145deg, rgba(255, 255, 255, 0.38), rgba(0, 0, 0, 0.03));
+  --nm-convex: 7px 7px 14px var(--nm-shadow-dark), -7px -7px 14px var(--nm-shadow-light);
+  --nm-convex-sm: 4px 4px 8px var(--nm-shadow-dark), -4px -4px 8px var(--nm-shadow-light);
+  --nm-convex-lg: 12px 12px 28px var(--nm-shadow-dark), -12px -12px 28px var(--nm-shadow-light);
+  --nm-inset: inset 4px 4px 8px var(--nm-shadow-dark), inset -4px -4px 8px var(--nm-shadow-light);
+  --nm-inset-sm: inset 2px 2px 4px var(--nm-shadow-dark), inset -2px -2px 4px var(--nm-shadow-light);
+  --nm-accent: var(--gradient-primary);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -43,6 +61,17 @@
   --shadow-elevation-1: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-elevation-2: 0 8px 30px rgba(0, 0, 0, 0.4);
   --shadow-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+  /* ====== Neumorphic Design Tokens (dark) ====== */
+  --nm-bg: #14161c;
+  --nm-surface: #14161c;
+  --nm-text: #e6e9ef;
+  --nm-muted: #98a2b3;
+  --nm-shadow-dark: #0b0d12;
+  --nm-shadow-light: #232834;
+  --nm-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.24));
+  --nm-gradient-soft: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.1));
+  --nm-accent: linear-gradient(135deg, #25c2a0 0%, #2e8555 100%);
 
   /* Darker background colors for better readability */
   --ifm-background-color: #010409;
@@ -432,4 +461,127 @@
 img[src] {
   max-width: 100%;
   border-radius: 16px;
+}
+
+/* ====== Neumorphic Global Skin (doc article pages, light + dark) ====== */
+
+body {
+  background-color: var(--nm-bg);
+}
+
+.main-wrapper {
+  background-color: var(--nm-bg);
+}
+
+[data-theme='dark'] .doc-main-container,
+[data-theme='dark'] .theme-doc-markdown,
+[data-theme='dark'] .menu,
+[data-theme='dark'] .theme-doc-sidebar-container,
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .footer {
+  background-color: var(--nm-bg);
+}
+
+/* Navbar — soft extruded bar */
+.navbar {
+  background-color: var(--nm-bg);
+  border-bottom: none;
+  box-shadow: 0 6px 16px rgba(163, 177, 198, 0.25);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar links — soft pills, active inset */
+.menu__link {
+  border-radius: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--nm-gradient-soft);
+  box-shadow: var(--nm-inset-sm);
+}
+
+.menu__link:hover {
+  background: var(--nm-gradient-soft);
+}
+
+/* Admonitions — soft raised panels */
+.theme-admonition,
+.alert {
+  background: var(--nm-gradient);
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* Tables — soft panel wrapper */
+.table-wrapper {
+  background: var(--nm-gradient);
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+  border: none;
+}
+
+.table-wrapper table {
+  background: transparent;
+  border: none;
+}
+
+.table-wrapper thead {
+  background: var(--nm-gradient-soft);
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  border-color: color-mix(in srgb, var(--nm-shadow-dark) 35%, transparent);
+}
+
+/* Code blocks — raised panels */
+.theme-code-block,
+pre.prism-code {
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+  border: 1px solid color-mix(in srgb, var(--nm-shadow-dark) 20%, transparent);
+}
+
+/* Cards + pagination */
+.card,
+.pagination-nav__link {
+  background: var(--nm-gradient);
+  border: none;
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+}
+
+.pagination-nav__link:hover {
+  background: var(--nm-gradient);
+}
+
+/* Breadcrumbs — soft chips */
+.theme-doc-breadcrumbs .breadcrumbs__link {
+  background: var(--nm-gradient-soft);
+  box-shadow: var(--nm-inset-sm);
+  border-radius: 9999px;
+  padding: 0.25rem 0.8rem;
+}
+
+/* Details (FAQ / tables on doc pages) — soft raised panel */
+.theme-doc-markdown > details {
+  background: var(--nm-gradient);
+  border: none;
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+}
+
+/* DocSearch input — soft inset */
+.DocSearch-Button {
+  background: var(--nm-gradient-soft);
+  box-shadow: var(--nm-inset-sm);
+  border-radius: var(--nm-radius-sm);
 }

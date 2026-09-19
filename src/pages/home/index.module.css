@@ -14,11 +14,17 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 25%, #f0f9ff 50%, #faf5ff 75%, #fdf2f8 100%);
+  background:
+    radial-gradient(ellipse at top right, rgba(46, 133, 85, 0.18), transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(102, 126, 234, 0.16), transparent 60%),
+    linear-gradient(135deg, #eef1f6 0%, #e9eef6 25%, #edf3ec 50%, #eef0f8 75%, #f1edf6 100%);
 }
 
 :global([data-theme='dark']) .heroBanner {
-  background: linear-gradient(135deg, #0c1f17 0%, #0f1f1a 25%, #0f172a 50%, #1a0f2e 75%, #1f0f1f 100%);
+  background:
+    radial-gradient(ellipse at top right, rgba(46, 133, 85, 0.2), transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(102, 126, 234, 0.18), transparent 60%),
+    linear-gradient(135deg, #14161c 0%, #151823 25%, #151a15 50%, #16151f 75%, #19151c 100%);
 }
 
 /* Animated gradient orbs behind the hero */
@@ -166,6 +172,11 @@
   color: #fff;
 }
 
+.main_docs__get_started:active {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.25);
+  transform: translateY(0);
+}
+
 .main_docs__get_started:hover::after {
   left: 100%;
 }
@@ -283,4 +294,9 @@
     line-height: 2.4rem;
     padding: 0 24px;
   }
+}
+
+.homeSection {
+  padding: 2.5rem 0;
+  position: relative;
 }

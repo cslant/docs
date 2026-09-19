@@ -16,13 +16,6 @@ const Navbar = {
     {
       type: 'doc',
       docId: 'index',
-      label: 'Web Services',
-      href: 'https://cslant.net',
-      position: 'left',
-    },
-    {
-      type: 'doc',
-      docId: 'index',
       href: '/',
       label: 'Home',
       position: 'right',
