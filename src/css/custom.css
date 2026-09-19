@@ -550,6 +550,22 @@ pre.prism-code {
   border: 1px solid color-mix(in srgb, var(--nm-shadow-dark) 20%, transparent);
 }
 
+/* Titled code block — soft header bar + lifted body */
+[class*='codeBlockTitle'] {
+  background: var(--nm-gradient-soft);
+  color: var(--nm-text);
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid color-mix(in srgb, var(--nm-shadow-dark) 22%, transparent);
+  box-shadow: var(--nm-inset-sm);
+}
+
+[data-theme='dark'] [class*='codeBlockTitle'] {
+  background: var(--nm-gradient-soft);
+}
+
 /* Cards + pagination */
 .card,
 .pagination-nav__link {
