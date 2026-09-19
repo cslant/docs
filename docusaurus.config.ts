@@ -5,6 +5,7 @@ import { GithubProjectPHPConfig, LaravelLikePackageConfig, TelegramGitNotifierPa
 import { RepoDocsStatic } from "./src/configs/staticDirectories";
 import PrismConfig from "./src/configs/prism";
 import AlgoliaConfig from "./src/configs/algolia";
+import JsonLdPlugin from "./src/plugins/jsonld";
 require('dotenv').config();
 
 const config: Config = {
@@ -101,7 +102,8 @@ const config: Config = {
         anonymizeIP: true,
       },
     ],
-    ['docusaurus-plugin-sass', {}]
+    ['docusaurus-plugin-sass', {}],
+    JsonLdPlugin,
   ],
   baseUrlIssueBanner: false,
   

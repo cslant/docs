@@ -6046,6 +6046,7 @@ __metadata:
     "@docusaurus/types": "npm:^3.10.2"
     "@mdx-js/react": "npm:^3.1.1"
     "@types/react": "npm:^19.3.0"
+    cheerio: "npm:1.0.0-rc.12"
     clsx: "npm:^2.1.1"
     docusaurus-plugin-sass: "npm:^0.2.7"
     dotenv: "npm:^17.4.2"
