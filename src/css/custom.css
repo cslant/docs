@@ -542,12 +542,27 @@ body {
   border-color: color-mix(in srgb, var(--nm-shadow-dark) 35%, transparent);
 }
 
-/* Code blocks — raised panels */
-.theme-code-block,
+/* Code blocks — raised panels. The container owns all the chrome; the nested
+   code body sits flush so there is no seam between title bar and code. */
+.theme-code-block {
+  border-radius: var(--nm-radius-sm);
+  box-shadow: var(--nm-convex-sm);
+  border: 1px solid color-mix(in srgb, var(--nm-shadow-dark) 20%, transparent);
+  overflow: hidden;
+}
+
+/* Bare prism <pre> rendered outside the panel container */
 pre.prism-code {
   border-radius: var(--nm-radius-sm);
   box-shadow: var(--nm-convex-sm);
   border: 1px solid color-mix(in srgb, var(--nm-shadow-dark) 20%, transparent);
+}
+
+/* Code body inside the panel: flush edges, no double frame or shadow seam */
+.theme-code-block pre {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Titled code block — soft header bar + lifted body */
