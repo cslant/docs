@@ -51,5 +51,7 @@ opencode.json
 .mcp.json
 .qwen
 skills-lock.json
+superpowers
 
 public/*.json
+docs
