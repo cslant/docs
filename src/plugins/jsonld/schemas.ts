@@ -1,10 +1,10 @@
 import type {
   PageData,
   BreadcrumbItem,
-  CodeBlockData,
   FaqItem,
 } from './extract';
 import type { RouteType } from './routes';
+import { repoForPath } from './routes';
 
 export interface SiteInfo {
   siteUrl: string;
@@ -134,21 +134,30 @@ export function buildBreadcrumbList(page: PageData, site: SiteInfo): JsonLdNode 
 }
 
 export function buildCodeSource(
-  code: CodeBlockData,
+  page: PageData,
   canonical: string,
-  index: number,
-): JsonLdNode {
+  codeRepository: string,
+): JsonLdNode | null {
+  if (page.codeBlocks.length === 0) {
+    return null;
+  }
+  const languages = Array.from(
+    new Set(page.codeBlocks.map((block) => block.language).filter((lang): lang is string => Boolean(lang))),
+  );
   const node: JsonLdNode = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareSourceCode',
-    '@id': `${canonical}#code-${index + 1}`,
-    name: code.title ?? 'Code example',
-    codeSampleType: 'full example',
+    '@id': `${canonical}#code`,
+    name: page.title,
+    codeSampleType: 'code snippet',
     isAccessibleForFree: true,
     about: { '@id': `${canonical}#webpage` },
+    codeRepository,
   };
-  if (code.language) {
-    node.programmingLanguage = code.language;
+  if (languages.length === 1) {
+    node.programmingLanguage = languages[0];
+  } else if (languages.length > 1) {
+    node.programmingLanguage = languages;
   }
   return node;
 }
@@ -227,8 +236,10 @@ export function buildPageSchemas(
     schemas.push(buildBreadcrumbList(page, site));
   }
 
-  for (const [index, code] of page.codeBlocks.entries()) {
-    schemas.push(buildCodeSource(code, page.canonical ?? '', index));
+  const canonical = page.canonical ?? '';
+  const code = buildCodeSource(page, canonical, repoForPath(canonical));
+  if (code) {
+    schemas.push(code);
   }
 
   if (page.faqItems.length > 0) {

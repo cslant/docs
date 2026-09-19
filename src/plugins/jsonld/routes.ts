@@ -10,6 +10,23 @@ export type RouteType =
 
 export const LANDING_BASES = ['laravel-like', 'github-project-php', 'telegram-git-notifier'];
 
+const REPO_MAP: Record<string, string> = {
+  'laravel-like': 'https://github.com/cslant/laravel-like',
+  'github-project-php': 'https://github.com/cslant/github-project-php',
+  'telegram-git-notifier': 'https://github.com/cslant/telegram-git-notifier',
+};
+
+export function repoForPath(canonicalUrl: string): string {
+  let pathname = '/';
+  try {
+    pathname = new URL(canonicalUrl).pathname;
+  } catch {
+    pathname = canonicalUrl;
+  }
+  const segment = pathname.split('/').filter(Boolean)[0];
+  return REPO_MAP[segment] ?? 'https://github.com/cslant';
+}
+
 export function classifyRoute(page: PageData, canonicalUrl: string): RouteType {
   let pathname = '/';
   try {
