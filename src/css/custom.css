@@ -63,7 +63,7 @@
   --shadow-elevation-3: 0 16px 48px rgba(0, 0, 0, 0.5);
 
   /* ====== Neumorphic Design Tokens (dark) ====== */
-  --nm-bg: #14161c;
+  --nm-bg: #010409;
   --nm-surface: #14161c;
   --nm-text: #e6e9ef;
   --nm-muted: #98a2b3;
@@ -88,36 +88,36 @@
 
 /* Dark mode specific overrides */
 [data-theme='dark'] body {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .main-wrapper {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .doc-main-container {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .theme-doc-markdown {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .menu {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .theme-doc-sidebar-container {
-  background-color: #010409;
+  background-color: var(--nm-bg);
 }
 
 [data-theme='dark'] .navbar {
-  background-color: #010409;
+  background-color: var(--nm-bg);
   border-bottom: 1px solid #21262d;
 }
 
 [data-theme='dark'] .footer {
-  background-color: #010409;
+  background-color: var(--nm-bg);
   border-top: 1px solid #21262d;
 }
 
