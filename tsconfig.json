@@ -1,6 +1,13 @@
 {
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
+    // @docusaurus/tsconfig sets baseUrl relative to its own directory inside
+    // node_modules, which makes every "@site/*" path resolve there instead of
+    // here. Re-anchor it to the project root. ignoreDeprecations keeps
+    // TypeScript 6 from rejecting baseUrl outright; drop both once the preset
+    // stops setting it.
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
     "paths": {
       "@site/*": ["./*"]
     }

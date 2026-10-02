@@ -27,7 +27,6 @@ yarn.lock
 .env
 .yarn
 .pnp.*
-.github
 
 
 .antigravitycli
@@ -54,4 +53,4 @@ skills-lock.json
 superpowers
 
 public/*.json
-docs
+/docs/superpowers/

@@ -8,6 +8,11 @@ build:
   stage: build
   tags:
     - csl2
+  # The runner builds and publishes straight into the directory nginx serves,
+  # so two pipelines must never overlap: a second build wipes the output of the
+  # first and the live site is left with chunks that no page references.
+  resource_group: docs-production
+  interruptible: false
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:

@@ -5,6 +5,13 @@ on:
     branches:
       - main
 
+# The build and the sync both happen inside the directory nginx serves, so two
+# overlapping runs leave the live site referencing chunks that were deleted by
+# the other run.
+concurrency:
+  group: docs-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: self-hosted
@@ -36,4 +43,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY_WEB_2 }}
           port: ${{ secrets.REMOTE_PORT_WEB_2 }}
           script: |
-            rsync -avz --delete ${{ vars.DOCS_PATH_WEB_2 }}/build/ ${{ vars.NGINX_SERVER_NAME }}:${{ vars.NGINX_SERVER_SYNC_PATH }}/docs/
+            # --delay-updates stages every file and renames them in one pass at
+            # the end, and --delete-after keeps the previous chunks on disk until
+            # the new ones are all in place. Without both, the web root spends
+            # the whole transfer missing files that live pages are requesting.
+            rsync -avz --delay-updates --delete-after ${{ vars.DOCS_PATH_WEB_2 }}/build/ ${{ vars.NGINX_SERVER_NAME }}:${{ vars.NGINX_SERVER_SYNC_PATH }}/docs/

@@ -22,10 +22,12 @@ const config: Config = {
   projectName: process.env.PROJECT_NAME,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  
+
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   
   staticDirectories: [...RepoDocsStatic, 'static'] as Config['staticDirectories'],
@@ -106,7 +108,9 @@ const config: Config = {
     JsonLdPlugin,
   ],
   baseUrlIssueBanner: false,
-  
+
+  clientModules: ['./src/clientModules/chunkRecovery.ts'],
+
   scripts: [
     {
       src: 'https://static.cloudflareinsights.com/beacon.min.js',
