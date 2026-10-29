@@ -7,7 +7,11 @@
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-.revealVisible {
+/* Two-class selector on purpose: cssnano's mergeRules merges this block with
+   any other rule that has identical declarations and may hoist it above
+   .reveal in the minified bundle. Equal specificity would then let .reveal
+   win and keep every card at opacity 0. */
+.reveal.revealVisible {
   opacity: 1;
   transform: translateY(0);
 }
