@@ -1,8 +1,8 @@
 import { themes as prismThemes } from "prism-react-renderer";
 
 const PrismConfig = {
-  theme: prismThemes.github,
-  darkTheme: prismThemes.dracula,
+  theme: prismThemes.oneLight,
+  darkTheme: prismThemes.oneDark,
   additionalLanguages: [
     'java',
     'latex',

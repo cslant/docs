@@ -45,7 +45,7 @@ const config: Config = {
           sidebarPath: './src/configs/sidebars.ts',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css', './src/css/theme.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -63,7 +63,30 @@ const config: Config = {
     },
 
     footer: {
-      style: 'dark',
+      style: 'light',
+      links: [
+        {
+          title: 'Packages',
+          items: [
+            { label: 'Telegram Git Notifier', to: '/telegram-git-notifier' },
+            { label: 'Laravel Like', to: '/laravel-like' },
+            { label: 'Github Project PHP', to: '/github-project-php' },
+          ],
+        },
+        {
+          title: 'Products',
+          items: [
+            { label: 'Golemi Proxy', href: 'https://golemi.io/docs' },
+          ],
+        },
+        {
+          title: 'CSlant',
+          items: [
+            { label: 'Website', href: 'https://cslant.com' },
+            { label: 'GitHub', href: 'https://github.com/cslant' },
+          ],
+        },
+      ],
       copyright: `Copyright &#169; ${new Date().getFullYear()} <a href="https://cslant.com" target="_blank" rel="noopener noreferrer">CSlant</a>`,
     },
 
@@ -111,6 +134,17 @@ const config: Config = {
 
   clientModules: ['./src/clientModules/chunkRecovery.ts'],
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap',
+      type: 'text/css',
+    },
+  ],
+  headTags: [
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' } },
+  ],
+  
   scripts: [
     {
       src: 'https://static.cloudflareinsights.com/beacon.min.js',

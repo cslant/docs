@@ -1,5 +1,7 @@
+// Docs-style navbar: product sections on the left as tabs (active one highlighted),
+// search, external links and the call to action on the right.
 const Navbar = {
-  hideOnScroll: true,
+  hideOnScroll: false,
   title: 'CSlant',
   logo: {
     alt: 'CSlant Logo',
@@ -7,17 +9,25 @@ const Navbar = {
   },
   items: [
     {
-      type: 'doc',
-      docId: 'index',
-      label: 'Our Website',
-      href: 'https://cslant.com',
+      to: '/telegram-git-notifier',
+      label: 'Telegram Git Notifier',
       position: 'left',
+      activeBaseRegex: '^/telegram-git-notifier',
     },
     {
-      type: 'doc',
-      docId: 'index',
-      href: '/',
-      label: 'Home',
+      to: '/laravel-like',
+      label: 'Laravel Like',
+      position: 'left',
+      activeBaseRegex: '^/laravel-like',
+    },
+    {
+      to: '/github-project-php',
+      label: 'Github Project PHP',
+      position: 'left',
+      activeBaseRegex: '^/github-project-php',
+    },
+    {
+      type: 'search',
       position: 'right',
     },
     {
@@ -28,30 +38,18 @@ const Navbar = {
         {
           label: 'Golemi Proxy',
           href: 'https://golemi.io/docs',
-          id: 'golemi-proxy',
-          target: '_blank',
         },
       ],
     },
     {
       type: 'dropdown',
-      label: 'Packages',
+      label: 'CSlant',
       position: 'right',
       items: [
         {
-          label: 'Telegram Git Notifier Package',
-          href: '/telegram-git-notifier',
-          id: 'telegram-git-notifier',
-        }, {
-          label: 'Laravel Like Package',
-          href: '/laravel-like',
-          id: 'laravel-like',
+          label: 'Our Website',
+          href: 'https://cslant.com',
         },
-        {
-          label: 'Github Project PHP',
-          href: '/github-project-php',
-          id: 'github-project-php',
-        }
       ],
     },
     {
@@ -59,6 +57,12 @@ const Navbar = {
       position: 'right',
       className: 'header-github-link',
       'aria-label': 'GitHub organization',
+    },
+    {
+      href: 'https://cslant.com',
+      label: 'Visit CSlant',
+      position: 'right',
+      className: 'navbar__cta',
     },
   ],
 };
